@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Haettenschweiler', 'Arial Narrow Bold', sans-serif;
+}
+
+.header {
+    padding: 15vmax;
+    width: 100%;
+    text-align: center;
+    background: rgb(91, 146, 229) url('/Images/Header-img.jpg') center/cover no-repeat;
+    color: black;
+    position: relative;
+    animation: fadeInUp 1s ease-out;
+    flex-wrap: wrap;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #333;
+    width: 100%;
+}
+
+.button-container button {
+    color: #fff;
+    flex: 1;
+    margin: 5px;
+    padding: 8px 12px; /* Adjusted padding to make buttons smaller */
+    text-decoration: none;
+    text-align: center;
+    background-color: #007bff;
+    border: 1px solid #0056b3;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease, transform 0.2s ease;
+}
+
+.button-container button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.button-container button:active {
+    transform: scale(0.95);
+}
+
+.logo {
+    flex: 50%;
+    position: relative;
+    animation: fadeInLeft 1s ease-out;
+}
+
+.img {
+    width: 100%;
+    height: 20vmax;
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.main {
+    flex: 100%;
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+    animation: fadeInRight 1s ease-out;
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.footer {
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    background: #ddd url('/Images/footer.png') center/cover no-repeat;
+    position: relative;
+    animation: fadeInUp 1s ease-out;
+}
+
+@media only screen and (min-width: 768px) {
+    .button-container {
+        flex-direction: row;
+    }
+
+    .logo {
+        flex: 30%;
+    }
+
+    .main {
+        flex: 70%;
+    }
+
+    .footer button {
+        padding: 8px 12px; /* Adjusted padding for footer buttons in larger screens */
+    }
+}
